@@ -97,6 +97,7 @@ def choose_word(guess_words, solution_words):
 
 
 def make_guess(chosen_word, solution_words):
+    time.sleep(2)
     actions.send_keys(chosen_word + Keys.ENTER)
     actions.perform()
     print('round:', round + 1)
