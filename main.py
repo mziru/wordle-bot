@@ -97,7 +97,6 @@ def choose_word(guess_words, solution_words):
 
 
 def make_guess(chosen_word, solution_words):
-    time.sleep(2)
     actions.send_keys(chosen_word + Keys.ENTER)
     actions.perform()
     print('round:', round + 1)
@@ -126,6 +125,8 @@ def process_feedback(feedback, solution_words):
         exit(0)
 
     return solution_words
+
+time.sleep(1)
 
 # play the game
 for round in range(6):
