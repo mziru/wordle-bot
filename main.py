@@ -16,7 +16,8 @@ actions = ActionChains(driver)
 
 # automatically open wordle in Chrome, and close pop-up instructions
 driver.get("https://www.nytimes.com/games/wordle/")
-element = driver.find_element(By.CLASS_NAME, "Modal-module_closeIcon__b4z74")
+# element = driver.find_element(By.CLASS_NAME, "Modal-module_closeIcon__TcEKb")
+element = driver.find_element(By.XPATH, '/html/body/div/div/dialog/div/button')
 element.click()
 
 # create word lists. note that the list of allowed guesses (which includes words that are rare, obsolete,
